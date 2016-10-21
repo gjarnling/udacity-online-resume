@@ -4,9 +4,9 @@ var HTMLheaderRole = '<span class="role">%data%</span>';
 var HTMLcontactGeneric = '<li class="flex-item"><span>%contact%</span> <span>%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><a href="tel:%data%" class="contactBtn"><i class="material-icons contactBtnIcon">phone</i> <span class="contactBtnText">Mobile</span></a></li>';
 var HTMLemail = '<li class="flex-item"><a href="mailto:%data%" class="contactBtn"><i class="material-icons contactBtnIcon">email</i> <span class="contactBtnText">Email</span></a></li>';
-var HTMLtwitter = '<li class="flex-item"><a href="%data%" class="contactBtn"><img src="../images/logo-twitter.svg"  class="contactBtnImg" alt=""></a> <span class="contactBtnText">Twitter</span></li>';
-var HTMLfacebook = '<li class="flex-item"><a href="%data%" class="contactBtn"><img src="../images/logo-facebook.svg" class="contactBtnImg" alt=""> <span class="contactBtnText">Facebook</span></a></li>';
-var HTMLgithub = '<li class="flex-item"><a href="%data%" class="contactBtn"><img src="../images/logo-github.svg" class="contactBtnImg" alt=""> <span class="contactBtnText">Github</span></a></li>';
+var HTMLtwitter = '<li class="flex-item"><a href="%data%" class="contactBtn"><img src="./images/logo-twitter.svg"  class="contactBtnImg" alt=""></a> <span class="contactBtnText">Twitter</span></li>';
+var HTMLfacebook = '<li class="flex-item"><a href="%data%" class="contactBtn"><img src="./images/logo-facebook.svg" class="contactBtnImg" alt=""> <span class="contactBtnText">Facebook</span></a></li>';
+var HTMLgithub = '<li class="flex-item"><a href="%data%" class="contactBtn"><img src="./images/logo-github.svg" class="contactBtnImg" alt=""> <span class="contactBtnText">Github</span></a></li>';
 var HTMLblog = '<li class="flex-item"><span>blog</span> <span>%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><a href="http://maps.google.com/?q=%data%" class="contactBtn"><i class="material-icons contactBtnIcon">my_location</i> <span class="contactBtnText">My location</span></a></li>';
 
