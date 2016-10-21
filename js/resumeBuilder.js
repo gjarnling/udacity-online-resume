@@ -366,7 +366,7 @@ var projects = {
         "./images/logo-illustrator.svg",
         "./images/logo-fonts.com.svg",
       ],
-      "url" : "https://gjarnling.github.io/udacity-build-a-portfolio-site/"
+      "url" : "https://gjarnling.github.io/udacity-online-resume/"
     },
     {
       "title" : "Udacity Build a Portfolio Site",
