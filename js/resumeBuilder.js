@@ -416,7 +416,7 @@ var projects = {
         "./images/logo-css3.svg",
         "./images/logo-wikia.svg"
       ],
-      "url" : "https://www.mediawiki.org/"
+      "url" : "https://humlegarden.se/"
     },
     {
       "title" : "Wikia for Svensk Bevakningstjänst AB's Alarm Central",
