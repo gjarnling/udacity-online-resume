@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<title>Gustaf Jarnling's Resume</title>
+  	<meta name="viewport" content="width=device-width,initial-scale=1">
+  	<!-- Defined inline to render asap when DOM loads -->
+  	<style>
+  		#splash {
+  			align-items: center;
+  			background: rgba(0, 188, 212, 1) url(./images/logo-gj-white-loading.svg) 50% 50%/300px no-repeat;
+  			display: flex;
+  			justify-content: center;
+  			height: 100%;
+  			left: 0;
+  			overflow: visible;
+  			position: fixed;
+  			top: 0;
+  			width: 100%;
+  			z-index: 3000;
+  		}
+  	</style>
+  	<base target="_blank">
+  	<link rel="icon" href="./images/favicon.ico">
+  	<!-- Normalize default browser styles -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  	<!-- Bootstrap core CSS -->
+  	<link href="./css/bootstrap.min.css" rel="stylesheet">
+  	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug so the Bootstrap nav will work -->
+  	<link href="./css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  	<link href="./css/style.css" rel="stylesheet">
+  	<link href="./css/responsive.css" rel="stylesheet">
+  	<!-- Import Google Material Design Icons -->
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<!-- Enable Google Maps -->
+  	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBOKOFufd4K7gc7sQd9XUrN03lfSoOMRUM&libraries=places"></script>
+  	<!-- Import fonts from fonts.com -->
+  	<script src="//fast.fonts.net/jsapi/c9573fd5-eeae-474c-891e-b205a0e3cfe8.js"></script>
+  </head>
+  <body data-spy="scroll" data-target="#navbar" data-offset="64">
+  	<!-- Overlay the viewport with a splash screen while content is loaded, see inline CSS above -->
+  	<div id="splash"></div>
+  	<!-- Added a Bootstrap static navbar at the top of the page -->
+  	<nav class="navbar navbar-default navbar-fixed-top">
+  		<div class="container">
+  			<div class="navbar-header">
+  				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+  					<span class="sr-only">Toggle navigation</span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  				</button>
+  				<a class="navbar-brand" href="#main">
+  					<img src="./images/logo-gj-white.svg" alt="" width="24" height="24">
+  				</a>
+  			</div>
+  			<div id="navbar" class="navbar-collapse collapse" style="min-height:50px;margin:0 auto;overflow:hidden;">
+  				<ul class="nav navbar-nav navbar-right" role="tablist">
+            <!-- data-toggle and data-target are used for scrollspying  -->
+  					<li data-toggle="collapse" data-target="#navbar">
+              <a href="#workExperience" id="navBtnWork">Work Experience</a>
+  					</li>
+  					<li data-toggle="collapse" data-target="#navbar">
+              <a href="#projects" id="navBtnProjects">Projects</a>
+  					</li>
+  					<li data-toggle="collapse" data-target="#navbar">
+              <a href="#education" id="navBtnEducation">Education</a>
+  					</li>
+  					<li data-toggle="collapse" data-target="#navbar">
+              <a href="#mapDiv" id="navBtnMap">Where I've Lived and Worked</a>
+  					</li>
+  					<li data-toggle="collapse" data-target="#navbar">
+              <a href="#lets-connect" id="navBtnConnect">Let's Connect</a>
+  					</li>
+  				</ul>
+  			</div>
+  		</div>
+  	</nav>
+  	<div id="main">
+  		<div id="header">
+  			<ul id="topContacts"></ul>
+  		</div>
+  		<div id="workExperience">
+  			<h2 class="work-experience-header">Work Experience</h2>
+  		</div>
+  		<div id="projects">
+  			<h2 class="projects-header">Projects</h2>
+  		</div>
+  		<div id="education">
+  			<h2 class="education-header">Education</h2>
+  		</div>
+  		<div id="mapDiv">
+  			<h2 class="map-header">Where I've Lived and Worked</h2>
+  		</div>
+  		<div id="lets-connect">
+  			<h2 class="connect-header">Let's Connect</h2>
+  			<ul id="footerContacts">
+  			</ul>
+  		</div>
+  	</div>
+  	<script src="./js/jQuery.js"></script>
+  	<script src="./js/helper.js"></script>
+  	<script src="./js/resumeBuilder.js"></script>
+  	<script src="./js/bootstrap.min.js"></script>
+  	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  	<script src="./js/ie10-viewport-bug-workaround.js"></script>
+  	<script>
+  		// When DOM is loaded hide the scrollbar
+  		$(document).ready(function() {
+  			$("body").css("overflow", "hidden");
+  		});
+
+  		// When page is rendered
+  		$(window).load(function() {
+  			// Fade out #preloader after 1s
+  			$('#splash').delay(1000).fadeOut('slow', function() {
+  				// Make scrollbar visible again
+  				$("body").css("overflow", "visible");
+  				// Remove #preloader from the DOM
+  				$(this).remove();
+  			});
+  		});
+
+  		// Animate instead of jumping to bookmarks
+
+  		// Grab all bookmarks on the page
+  		$("a[href^='#']").on("click", function(event) {
+  			// Save the bookmark target clicked on
+  			var target = $(this.getAttribute("href"));
+
+  			// If the bookmark has a value, ie is not #
+  			if (target.length) {
+  				// Prevent the default behavior, ie don't go to the bookmark
+  				event.preventDefault();
+  				// Instead animate to the bookmark over 0.4s
+  				$("html, body").animate({
+  					// Offset the bookmark with 64px due to padding
+  					scrollTop: (target.offset().top - 64)
+  				}, 400);
+  			}
+  		});
+
+  		// If no skills are given, hide #topContacts
+  		if (document.getElementsByClassName('flex-item').length === 0) {
+  			document.getElementById('topContacts').style.display = 'none';
+  		}
+
+  		// If no name is given, hide #header
+  		if (document.getElementsByTagName('h1').length === 0) {
+  			document.getElementById('header').style.display = 'none';
+  		}
+
+  		// If no work entries are given, hide #workExperience
+  		// and the work experience navigation button
+  		if (document.getElementsByClassName('work-entry').length === 0) {
+  			document.getElementById('workExperience').style.display = 'none';
+  			document.getElementById('navBtnWork').style.display = 'none';
+  		}
+
+  		// If no project entries are given, hide #projects
+  		// and the project navigation button
+  		if (document.getElementsByClassName('project-entry').length === 0) {
+  			document.getElementById('projects').style.display = 'none';
+  			document.getElementById('navBtnProjects').style.display = 'none';
+  		}
+
+  		// If no education entries are given, hide #education
+  		// and the education navigation button
+  		if (document.getElementsByClassName('education-entry').length === 0) {
+  			document.getElementById('education').style.display = 'none';
+  			document.getElementById('navBtnEducation').style.display = 'none';
+  		}
+
+  		// If no contact info is given, hide #lets-connect
+  		// and the connect navigation button
+  		if (document.getElementsByClassName('flex-item').length === 0) {
+  			document.getElementById('lets-connect').style.display = 'none';
+  			document.getElementById('navBtnConnect').style.display = 'none';
+  		}
+
+  		// If no locations are given, hide #mapDiv
+  		// and the map navigation button
+  		if (document.getElementById('map') === null) {
+  			document.getElementById('mapDiv').style.display = 'none';
+  			document.getElementById('navBtnMap').style.display = 'none';
+  		}
+  	</script>
+  </body>
+</html>
