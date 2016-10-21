@@ -60,63 +60,63 @@ var bio = {
         // Replace some skills with images instead
         switch (bio.skills[i]) {
           case "Atom.io":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Atom.io logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Atom.io logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "Bootstrap":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Bootstrap logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Bootstrap logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "Bower":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Bower logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Bower logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "CSS3":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="CSS3 logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="CSS3 logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "Fonts.com":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Fonts.com logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Fonts.com logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "Git":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Git logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Git logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "Grunt":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Grunt logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Grunt logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "HTML5":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="HTML5 logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="HTML5 logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "Illustrator":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Adobe Illustrator logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Adobe Illustrator logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "JavaScript":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="JavaScript logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="JavaScript logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "jQuery":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="jQuery logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="jQuery logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "NPM":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="NPM logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="NPM logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "Photoshop":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Adobe Photoshop logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Adobe Photoshop logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "Typekit":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Typekit logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Typekit logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           case "Wikia":
-            skillImage = '<img src="../images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Wikia logo" class="skill-image">';
+            skillImage = '<img src="./images/logo-' + bio.skills[i].toLowerCase() + '.svg" alt="Wikia logo" class="skill-image">';
             formattedSkill = HTMLskills.replace("%data%", skillImage);
             break;
           default:
