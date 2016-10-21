@@ -1,0 +1,190 @@
+/**************************************************************
+ * Responsiveness
+ * ------------------------------------------------------------
+ * Contains two major breakpoints (674px and 960px) and two
+ * minor breakpoints (500px and 768px).
+ *************************************************************/
+
+/*
+ * Minor breakpoint 500px: change title font-size
+ */
+
+@media screen and (min-width: 500px) {
+	#name {
+		font-size: 3.583em;
+		letter-spacing: 0.01em;
+	}
+
+	.role {
+		font-size: 1.44em;
+		letter-spacing: 0.01em;
+	};
+}
+
+/**************************************************************
+ * Major breakpoint 674px
+ * ------------------------------------------------------------
+ * Change font sizes and skill image sizes. Also change the
+ * layout of work, projects, and education entries to two
+ * columns from one. Make the contact buttons bigger and add
+ * text after them.
+ *************************************************************/
+
+@media screen and (min-width: 674px) {
+	#name {
+		font-size: 4.3em;
+		letter-spacing: 0.01em;
+	}
+
+	.biopic {
+		width: 100%;
+	}
+
+	#skills-h3 {
+		font-size: 1.2em;
+		margin-top: 16px;
+	}
+
+	#skills {
+		justify-content: flex-start;
+	}
+
+	.skill-item {
+		width: 10%;
+	}
+
+	.skill-image {
+		margin-bottom: 16px;
+	}
+
+	#workExperience,
+  #projects,
+  #education {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.work-experience-header {
+		font-size: 2.074em;
+		letter-spacing: 0.01em;
+	}
+
+	.projects-header,
+  .education-header,
+  .map-header,
+  .connect-header {
+		font-size: 2.074em;
+		letter-spacing: 0.01em;
+		margin-top: 16px;
+	}
+
+	.work-entry,
+  .project-entry,
+  .education-entry {
+		margin-right: 16px;
+		width: calc(50% - 8px);
+	}
+
+	.work-entry:nth-child(odd),
+  .project-entry:nth-child(odd),
+  .education-entry:nth-child(odd) {
+		margin-right: 0;
+	}
+
+	.education-subheader {
+		font-size: 1.2em;
+		margin-top: 0;
+	}
+
+	.contactBtn {
+		border-radius: 4px;
+	}
+
+	.contactBtnText {
+		display: inline;
+		margin-left: 4px;
+	};
+}
+
+/*
+ * Minor breakpoint 768px: make sure the navigation bar
+ * takes up the whole screen width; overwrite Bootstrap default.
+ */
+
+@media screen and (min-width: 768px) {
+	.container {
+		width: 100%;
+	};
+}
+
+/**************************************************************
+ * Major breakpoint 960px
+ * ------------------------------------------------------------
+ * Set the max width of the site. Remove padding from headings
+ * and bump up font sizes.
+ *************************************************************/
+
+@media screen and (min-width: 960px) {
+	.container {
+		max-width: 960px;
+	}
+
+	#header {
+		background: url(../images/logo-gj-white.svg) 0 50%/65% no-repeat;
+	}
+
+	#main {
+		margin: 0 auto;
+		max-width: 960px;
+	}
+
+	#name {
+		font-size: 5.16em;
+		padding: 48px 0 0 0;
+	}
+
+	.role {
+		font-size: 1.728em;
+		padding: 0 0 16px 0;
+	}
+
+	.biopic {
+		border-radius: 4px;
+		float: right;
+		width: 70%;
+	}
+
+	#skills-h3 {
+		clear: both;
+		margin-bottom: 16px;
+		padding: 48px 16px 16px 0;
+	}
+
+	#skills {
+		justify-content: space-around;
+	}
+
+	.skill-item {
+		width: 5%;
+	}
+
+	.work-experience-header,
+  .projects-header,
+  .education-header,
+  .map-header,
+  .connect-header {
+		padding-left: 0;
+	}
+
+	.education-subheader {
+		padding: 16px 0 0 0;
+	}
+
+	#map {
+		border-radius: 4px;
+	}
+
+	#lets-connect #footerContacts {
+		justify-content: space-around;
+	};
+}

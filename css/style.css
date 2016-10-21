@@ -1,0 +1,355 @@
+/**************************************************************
+ * General styles
+ * ------------------------------------------------------------
+ * Browser defaults are overwritten with normalize.css included
+ * in the HTML file.
+ *
+ * PS. Responsive properties is defined in responsive.css. DS.
+ *************************************************************/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: rgba(250,250,250,1) url(../images/bg.svg) -1% -1%/101% no-repeat;
+	color: rgba(51,51,51,0.87);
+	font-family: 'FrutigerNeue1450W01-Boo1196290', sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+img {
+	max-width: 100%;
+}
+
+a,
+a:hover {
+	color: rgba(0,188,212,1);
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+em {
+	font-family: 'FrutigerNeue1450W01-Boo1196293', sans-serif;
+	font-style: normal;
+}
+
+/**************************************************************
+ * Navigation bar
+ * ------------------------------------------------------------
+ * Bootstrap navigation bar. Could be customized in Bootstrap
+ * but here for clearity since the bootstrap CSS-file is
+ * minified.
+ *************************************************************/
+
+nav.navbar {
+	background-color: rgba(77,208,225,1);
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+             0 1px 10px 0 rgba(0, 0, 0, 0.12),
+             0 2px 4px -1px rgba(0, 0, 0, 0.4);
+	border-bottom: 0;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+	color: rgb(255,255,255);
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+	background-color: rgba(77,208,225,1);
+}
+
+.navbar-default .navbar-toggle {
+	border-color: rgba(77,208,225,1);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: rgb(255,255,255);
+}
+
+.navbar-brand,
+ul.nav li a {
+	font-family: 'ITC Avant Garde Gothic W01BdCn', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	background: rgba(0,151,167,1);
+	color: rgba(255,255,255,1);
+}
+
+/**************************************************************
+ * Header
+ * ------------------------------------------------------------
+ * The header contains a site title (#name) and subtitle
+ * (.role). Contact buttons (#topContacts) are hidden in the
+ * header and only showed in the footer, see below. After that
+ * a personal photo (.biopic) is showed. The welcome message
+ * (.welcome-message) is hidden. Thereafter a list of skills
+ * are showed, if given. Some of them are replaced with images.
+ *************************************************************/
+
+#name {
+	font-family: 'ITC Avant Garde Gothic W01BdCn', sans-serif;
+	font-size: 2.488em;
+	letter-spacing: 0.005em;
+	line-height: 1em;
+	margin: 46px 0 0 0;
+	padding: 32px 16px 0 16px;
+	text-transform: uppercase;
+}
+
+.role {
+	font-family: 'ITC Avant Garde Gothic W01BdCn', sans-serif;
+	color: rgba(51,51,51,0.54);
+	display: block;
+	font-size: 1.2em;
+	letter-spacing: 0.02em;
+	margin: 0;
+	padding: 0 16px 32px 16px;
+	text-transform: uppercase;
+}
+
+#topContacts {
+	display: none;
+}
+
+.biopic {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12),
+              0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	width: 100%;
+}
+
+.welcome-message {
+	display: none;
+}
+
+#skills-h3 {
+	font-family: 'ITC Avant Garde Gothic W01BdCn', sans-serif;
+	font-size: 1em;
+	letter-spacing: 0.02em;
+	margin: 16px 0 0 0;
+	padding: 16px;
+	text-transform: uppercase;
+}
+
+#skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 0 16px 0;
+	padding: 0 16px 0 0;
+	width: 100%;
+}
+
+.skill-item {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 16px;
+	width: 20%;
+}
+
+.skill-image {
+	max-height: 3em;
+	max-width: 95%;
+}
+
+/**************************************************************
+ * The site consist of five parts:
+ * - Work Experience
+ * - Projects
+ * - Education
+ * - Map
+ * - Connect
+ *
+ * All headers are defined together to keep conformity
+ *************************************************************/
+
+.work-experience-header,
+.projects-header,
+.education-header,
+.map-header,
+.connect-header {
+	font-family: 'ITC Avant Garde Gothic W01BdCn', sans-serif;
+	font-size: 1.44em;
+	letter-spacing: 0.02em;
+	margin: 0;
+	padding: 16px;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+/**************************************************************
+ * Three of the five parts contain entries:
+ * - Work Experience
+ * - Projects
+ * - Education
+ *
+ * All entries are defined below to keep conformity
+ *************************************************************/
+
+.work-entry,
+.project-entry,
+.education-entry {
+	background-color: rgba(255,255,255,1);
+	border-radius: 4px;
+	margin-bottom: 16px;
+	padding: 16px;
+}
+
+/**************************************************************
+ * All entries have date text. Some entries also have location
+ * text. A icon is placed before both dates and locations.
+ *************************************************************/
+
+.date-text {
+	color: rgba(51,51,51,0.54);
+	font-size: 0.833em;
+}
+
+.location-text {
+	color: rgba(51,51,51,0.54);
+	font-size: 0.833em;
+	margin-left: 16px;
+}
+
+.date-text .material-icons,
+.location-text .material-icons {
+	font-size: 1.2em;
+	margin-top: 2px;
+	vertical-align: text-top;
+}
+
+/**************************************************************
+ * Work Experience
+ * ------------------------------------------------------------
+ * Every work entry has a description
+ *************************************************************/
+
+.work-description {
+	margin: 16px 0 0 0;
+	padding: 0;
+}
+
+/**************************************************************
+ * Projects
+ * ------------------------------------------------------------
+ * Every project also has a description. The main difference
+ * is that it is followed by a set of images.
+ *************************************************************/
+
+.project-description {
+	border-bottom: 1px dotted rgba(51,51,51,0.12);
+	margin: 16px 0 0 0;
+	padding: 0 0 16px 0;
+}
+
+.project-entry .project-image {
+	margin-top: 16px;
+	max-height: 2em;
+	width: 3em;
+	vertical-align: middle;
+}
+
+/**************************************************************
+ * Education
+ * ------------------------------------------------------------
+ * The education part is the only one having a subheader for
+ * online courses. Apart from that every education entry have
+ * states the major subject. Online courses also states a URL
+ * to the course.
+ *************************************************************/
+
+.education-subheader {
+	font-family: 'ITC Avant Garde Gothic W01BdCn', sans-serif;
+	font-size: 1em;
+	letter-spacing: 0.02em;
+	margin-bottom: 16px;
+	padding: 16px 16px 0 16px;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.education-entry .school-major {
+	margin-top: 16px;
+}
+
+.education-entry .online-url {
+	margin-top: 16px;
+}
+
+/**************************************************************
+ * mapDiv
+ * ------------------------------------------------------------
+ * The mapDiv contains a map. Each location mentioned in the
+ * resume is showed as a pin on the map.
+ *************************************************************/
+
+#mapDiv {
+	margin-bottom: 16px;
+	width: 100%;
+}
+
+#map {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12),
+              0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	display: block;
+	height: 400px;
+}
+
+/**************************************************************
+ * lets-connect
+ * ------------------------------------------------------------
+ * The footer (#footerContacts) contain contact links.
+ *************************************************************/
+
+#footerContacts {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1em;
+	margin: 0 0 16px 0;
+	padding: 0 16px 16px 16px;
+	width: 100%;
+}
+
+.contactBtn {
+	background: rgba(255,255,255,1);
+	border-radius: 50%;
+	color: rgba(77,208,225,1);
+	display: flex;
+	justify-content: center;
+	padding: 16px;
+	transition: box-shadow 0.2s;
+}
+
+.contactBtn:hover {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12),
+              0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.contactBtnImg {
+	height: 24px;
+	width: 24px;
+}
+
+.contactBtnText {
+	display: none;
+}
